@@ -19,4 +19,4 @@ spec:
               spec:
                    containers:
                    - name: my-cont-php
-                     image: nitsin/apache-web-php:v2 
+                     image: nitsin/apache-web-php:v3 
