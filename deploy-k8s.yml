@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+         name: my-php-deploy
+
+spec:
+     replicas: 3
+     selector:
+              matchLabels:
+                            env: production
+                            region: India
+     template:
+              metadata:
+                       name: my-pod-php
+                       labels:
+                              env: production
+                              region: India
+              spec:
+                   containers:
+                   - name: my-cont-php
+                     image: nitsin/apache-web-php:v1 
